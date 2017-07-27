@@ -496,7 +496,7 @@ class _AdWordsHeaderHandler(googleads.common.HeaderHandler):
     header.userAgent = ''.join([
         self._adwords_client.user_agent,
         googleads.common.GenerateLibSig(self._PRODUCT_SIG)])
-    header.validateOnly = self._adwords_client.validate_only
+    header.validateOnly = True
     header.partialFailure = self._adwords_client.partial_failure
 
     http_headers = self._adwords_client.oauth2_client.CreateHttpHeader()
